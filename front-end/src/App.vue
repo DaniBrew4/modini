@@ -38,7 +38,7 @@
         </router-link>
       </div>
       <div class = "header-item login">
-        <router-link to="/user">
+        <router-link to="/login">
           <p v-if="user" @click="logout">Logout<br>{{user.username}}</p>
           <p v-else>Sign Up / Login</p>
         </router-link>
@@ -56,7 +56,7 @@
           <router-link v-if="user" to="/user">
             <p>Account</p>
           </router-link>
-          <router-link to="/user">
+          <router-link to="/login">
             <p v-if="user" @click="logout">Logout<br>{{user.username}}</p>
             <p v-else>Sign Up / Login</p>
           </router-link>

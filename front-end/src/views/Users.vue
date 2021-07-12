@@ -1,13 +1,20 @@
 <template>
-  <div class="body">
-    <p>Thanks for visiting our website! It will be up and running Soon!</p>
+  <div class="user">
+    <UserInfo v-if="user" />
+    <Login v-else />
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import UserInfo from '@/components/UserInfo.vue';
+import Login from 'Login.vue';
+import axios from 'axios';
 export default {
-  name: "Home",
+  name: 'user',
+  components: {
+    UserInfo,
+    Login,
+  },
   async created() {
     try {
       let response = await axios.get('/api/users');
@@ -19,16 +26,11 @@ export default {
   computed: {
     user() {
       return this.$root.$data.user;
-    },
+    }
   }
 }
 </script>
 
 <style scoped>
-.body {
-  text-align: center;
-  padding-top: 30px;
-  font-size: 50px;
-  font-weight: bolder;
-}
+
 </style>
