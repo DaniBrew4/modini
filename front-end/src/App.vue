@@ -27,6 +27,11 @@
           <p>Contact Us</p>
         </router-link>
       </div>
+      <div class = header-item>
+        <a href="https://buymodini.myshopify.com/">
+          <p>Shop</p>
+        </a>
+      </div>
       <div v-if="user" class = header-item>
         <router-link to="/user">
           <p>Account</p>
@@ -47,6 +52,7 @@
           <router-link to="/about-us"><p>About Us</p></router-link>
           <router-link to="/services"><p>Services</p></router-link>
           <router-link to="/contact-us"><p>Contact Us</p></router-link>
+          <a href="https://buymodini.myshopify.com/"><p>Shop</p></a>
           <router-link v-if="user" to="/user">
             <p>Account</p>
           </router-link>
