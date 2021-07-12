@@ -40,6 +40,8 @@
 import axios from 'axios';
 export default {
   name: 'HomePage',
+  components: {
+  },
   data() {
     return {
       firstName: '',
@@ -125,7 +127,9 @@ h1 {
 }
 
 input {
-  margin-right: 10px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .error {

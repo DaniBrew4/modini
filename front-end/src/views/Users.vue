@@ -7,7 +7,7 @@
 
 <script>
 import UserInfo from '@/components/UserInfo.vue';
-import Login from 'Login.vue';
+import Login from '@/views/Login.vue';
 import axios from 'axios';
 export default {
   name: 'user',
